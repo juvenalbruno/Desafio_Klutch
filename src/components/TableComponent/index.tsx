@@ -99,10 +99,11 @@ const Celulas = styled.div `
 const TitleColulas = styled.div `
     background-color: var(--color-background);
     padding: 5px 25px;
-    height: 40px;
     border: 1px solid var(--color-gray3);
     border-top: 0;
     border-left: 0;
+    font-size: 1.2vw;
+    height: 20px;
     
 `;
 const Value = styled.div `

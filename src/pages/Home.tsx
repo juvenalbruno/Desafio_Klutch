@@ -6,6 +6,7 @@ import TableComponent from "../components/TableComponent";
 
 import Plus from "../assets/icons/Grupo270.svg";
 import Filing from "../assets/icons/_ionicons_svg_md-filing-2.svg";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [Value, setValue] = useState<string>("");
@@ -26,7 +27,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <HomePage>
       <Sidebar />
       <Container>
         <TitleWrapp>
@@ -58,14 +59,16 @@ export default function Home() {
         </Wrapp>
       </Container>
 
-      {!habilityTable && (
-        <TableComponent />
-      )}
+      {!habilityTable && <TableComponent />}
+      {!habilityTable && <Footer /> }
 
-    </>
+    </HomePage>
   );
 }
 
+const HomePage = styled.div`
+  /* padding-bottom: 55px; */
+`;
 const Container = styled.div`
   max-width: 100vw;
 `;
