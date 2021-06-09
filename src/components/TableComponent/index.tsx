@@ -93,21 +93,20 @@ const TabelaContainer = styled.div `
 const Row = styled.div `
     display: flex;
 `;
-
 const Celulas = styled.div `
     color: var(--color-font);
 `;
 const TitleColulas = styled.div `
     background-color: var(--color-background);
     padding: 5px 25px;
-    height: 20px;
+    height: 40px;
     border: 1px solid var(--color-gray3);
     border-top: 0;
     border-left: 0;
-    font-size: 1.2vw;
     
 `;
 const Value = styled.div `
     border: 1px solid var(--color-gray3);
     border-top: 0;
+    border-left: 0;
 `;

@@ -10,7 +10,8 @@ import Filing from "../assets/icons/_ionicons_svg_md-filing-2.svg";
 export default function Home() {
   const [Value, setValue] = useState<string>("");
   const [hability, setHability] = useState<boolean>(true);
-
+  const [habilityTable, setHabilityTable] = useState<boolean>(true);
+  
   useEffect(() => {
     const ValueTemp = parseInt(Value);
     {
@@ -18,10 +19,10 @@ export default function Home() {
         ? setHability(false)
         : setHability(true);
     }
-  });
+  },[Value]);
 
   function handleSubmit() {
-    console.log("foi");
+    setHabilityTable(false);
   }
 
   return (
@@ -56,7 +57,11 @@ export default function Home() {
           </ValorWrapp>
         </Wrapp>
       </Container>
-      <TableComponent />
+
+      {!habilityTable && (
+        <TableComponent />
+      )}
+
     </>
   );
 }
@@ -137,7 +142,6 @@ const InputValue = styled.div`
   }
   input {
     border: 0;
-    /* width: 100%; */
     background-color: transparent;
     margin-left: 10px;
     font-size: 1.5vw;
