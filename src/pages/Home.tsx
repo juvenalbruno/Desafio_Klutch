@@ -27,42 +27,44 @@ export default function Home() {
   }
 
   return (
-    <HomePage>
-      <Sidebar />
-      <Container>
-        <TitleWrapp>
-          <img className="plus" src={Plus} />
-          <img src={Filing} />
-          <h1>
-            Simulação
-            <br />
-            de Taxas
-          </h1>
-        </TitleWrapp>
-        <Wrapp>
-          <h1>Valor Desejado</h1>
-          <ValorWrapp>
-            <InputValue>
-              <p>R$ </p>
-              <input
-                type="number"
-                name={Value}
-                id="money"
-                placeholder="0,00"
-                onChange={(e) => setValue(e.target.value)}
-              />
-            </InputValue>
-            <button disabled={hability} onClick={handleSubmit}>
-              Calcular
-            </button>
-          </ValorWrapp>
-        </Wrapp>
-      </Container>
+    <>
+      <HomePage>
+        <Sidebar />
+        <Container>
+          <TitleWrapp>
+            <img className="plus" src={Plus} />
+            <img src={Filing} />
+            <h1>
+              Simulação
+              <br />
+              de Taxas
+            </h1>
+          </TitleWrapp>
+          <Wrapp>
+            <h1>Valor Desejado</h1>
+            <ValorWrapp>
+              <InputValue>
+                <p>R$ </p>
+                <input
+                  type="number"
+                  name={Value}
+                  id="money"
+                  placeholder="0,00"
+                  onChange={(e) => setValue(e.target.value)}
+                />
+              </InputValue>
+              <button disabled={hability} onClick={handleSubmit}>
+                Calcular
+              </button>
+            </ValorWrapp>
+          </Wrapp>
+        </Container>
 
-      {!habilityTable && <TableComponent />}
-      {!habilityTable && <Footer /> }
+        {!habilityTable && <TableComponent />}
 
-    </HomePage>
+      </HomePage>
+        {!habilityTable && <Footer /> }
+    </>
   );
 }
 
