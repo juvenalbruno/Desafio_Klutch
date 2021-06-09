@@ -2,7 +2,7 @@
   "rateTable": [
     {
       "id": 1,
-      "name": "tabela 1",
+      "name": "Tabela 1",
       "installments": [
         {
           "id": 1,
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "name": "tabela 2",
+      "name": "Tabela 2",
       "installments": [
         {
           "id": 3,
