@@ -92,7 +92,7 @@ const Input = styled.div`
 const Wrapp = styled.div`
     margin-top: 25px;
     height: 355px;
-    width: 430px;
+    width: 390px;
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@ const Wrapp = styled.div`
     }
 
     button {
-        width: 350px;
+        width: 330px;
         height: 97px;
         margin-top: 18px;
 
