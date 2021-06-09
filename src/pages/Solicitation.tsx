@@ -16,7 +16,7 @@ export default function Home() {
                 <h1>Busque o Cliente</h1>
                 
                 <Input>
-                    <input type="number" placeholder="Digite o CPF" maxLength={11} />
+                    <input type="tel" placeholder="Digite o CPF" maxLength="11" />
                     <button>Buscar</button>
                 </Input>
             </Busca>
@@ -56,10 +56,10 @@ const Input = styled.div`
 
     margin-top: 20px;
 
-    input[type="number"]::-webkit-inner-spin-button {
+    input[type="tel"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
-    input[type="number"] {
+    input[type="tel"] {
         background-color: var(--color-background);
         color: var(--color-font);
         border: 0;
