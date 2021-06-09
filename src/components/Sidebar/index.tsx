@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { IoMdMenu } from 'react-icons/io';
 
-import logo from '../../assets/icons/logo.svg';
+import logo from '../../assets/icons/Grupo290.svg';
 
 export default function Sidebar(){
     return(
