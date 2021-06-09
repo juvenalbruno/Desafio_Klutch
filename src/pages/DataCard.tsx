@@ -97,7 +97,6 @@ const Column = styled.div`
         font-weight: 400;
         margin-top: 25px; 
     }
-    
     input {
         margin-top: 25px;
         font-style: italic;
