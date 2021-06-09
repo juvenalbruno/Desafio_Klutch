@@ -27,7 +27,6 @@ export default function Home() {
   }
 
   return (
-    <>
       <HomePage>
         <Sidebar />
         <Container>
@@ -61,10 +60,9 @@ export default function Home() {
         </Container>
 
         {!habilityTable && <TableComponent />}
+        {!habilityTable && <Footer /> }
 
       </HomePage>
-        {!habilityTable && <Footer /> }
-    </>
   );
 }
 
