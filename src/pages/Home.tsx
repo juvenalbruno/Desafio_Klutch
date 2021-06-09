@@ -69,7 +69,7 @@ export default function Home() {
 }
 
 const HomePage = styled.div`
-  /* padding-bottom: 55px; */
+  min-height: 100vh;
 `;
 const Container = styled.div`
   max-width: 100vw;
