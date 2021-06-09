@@ -30,7 +30,6 @@ export default function Footer(props) {
 
 const Container = styled.div`
   display: flex;
-  position: relative;
   width: 100%;
   justify-content: space-around;
   margin-top: 25px;
