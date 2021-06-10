@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Sidebar from '../components/Sidebar';
 
@@ -7,7 +8,13 @@ import Filing from "../assets/icons/_ionicons_svg_md-filing-2.svg";
 import Confirm from "../assets/icons/_ionicons_svg_ios-checkmark.svg";
 import TableComum from '../components/TableComum';
 
+import db from "../database/db.json";
+
 export default function Conclusion(){
+    const DataTable = db.rateTable;
+    const [table, setTable] = useState<number>(1);
+
+    console.log(table);
     return(
         <>
             <Sidebar />
@@ -21,8 +28,9 @@ export default function Conclusion(){
                     <TableOptions>
                         <h1>Tabela</h1>
                         <select name="" id="Tabela">
-                            <option value="Tabela 1">Tabela Padrão</option>
-                            <option value="Tabela 2">Tabela Padrão 2</option>
+                        {DataTable.map((Table) => (
+                            <option value={Table.name} onClick={()=> setTable(Table.id)}>{Table.name}</option>
+                        ))}
                         </select>
                     </TableOptions>
                 </Title>
@@ -72,20 +80,27 @@ export default function Conclusion(){
                         <Celula style={{backgroundColor: 'var(--color-white)'}}>
                             <InfoContent>
                                 <button>
-                                    <img src={Confirm} alt="Confirmar" />
-                                    Concluir
+                                    <Link to="/solicitation/success">
+                                        <img src={Confirm} alt="Confirmar" />
+                                        Concluir
+                                    </Link>
                                 </button>
                             </InfoContent>
                         </Celula>
                     </Column>
                 </Info>
             </Container>
-            <TableComum />
+            <TableComum ID={table}/>
         </>
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+    a {
+        text-decoration: none;
+        color: var(--color-white)
+    }
+`;
 const Title = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -196,7 +211,6 @@ const Celula = styled.div`
 `;
 const BTN = styled.div`
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-evenly;
     align-items: center;
 `;
@@ -211,11 +225,9 @@ const InfoContent = styled.div`
         color: var(--color-primary);
         margin-bottom: 10px;
     }
-
     input {
         display: none;
     }
-
     label {
         width: 220px;
         padding: 20px 0;

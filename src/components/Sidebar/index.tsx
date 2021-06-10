@@ -4,12 +4,13 @@ import styled from 'styled-components';
 import { IoMdMenu } from 'react-icons/io';
 
 import logo from '../../assets/icons/Grupo290.svg';
+import { Link } from 'react-router-dom';
 
 export default function Sidebar(){
     return(
         <SidebarContent>
             <IoMdMenu />
-            <img src={logo} alt="Klutch"/>
+            <Link to="/"><img src={logo} alt="Klutch"/></Link>
         </SidebarContent>
     );
 };
@@ -30,7 +31,7 @@ const SidebarContent = styled.div`
         cursor: pointer;
     };
 
-    img {
+    a {
         margin: auto;
         padding-right: 59.42px;
     };

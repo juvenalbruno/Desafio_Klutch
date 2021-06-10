@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Footer(props) {
@@ -23,7 +24,7 @@ export default function Footer(props) {
         </Value>
       </Wrapp>
 
-      <button onClick={(e) => handleSubmit}>Avançar</button>
+      <button onClick={(e) => handleSubmit}><Link to="/solicitation">Avançar</Link></button>
     </Container>
   );
 }
@@ -36,6 +37,11 @@ const Container = styled.div`
   margin-top: 25px;
   padding: 10px;
   background-color: var(--color-primary);
+
+  a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
 
   button {
     height: 3vw;

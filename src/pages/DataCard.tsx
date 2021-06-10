@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Sidebar from '../components/Sidebar';
 import Title from '../components/Title';
@@ -38,7 +39,7 @@ export default function DataCard(){
                     <p>Atençao: As fotos devem estar legíveis, com todas as informações visíveis do cartão.</p>
                 </Column>
                 </Form>
-                <button>Continuar</button>
+                <button><Link to="/solicitation/conclusion">Continuar</Link></button>
             </Container>
         </>
     );
@@ -49,6 +50,11 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
 
     button {
         width: 330px;

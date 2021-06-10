@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Sidebar from '../components/Sidebar';
 import Title from '../components/Title';
@@ -10,7 +11,7 @@ export default function SelectCart(){
             <Title Text="Solicitar Empréstimo"/>
             <Container>
                 <h1>Escolha a modalidade:</h1>
-                <button>Cartão de Crédito</button>
+                <button><Link to="/solicitation/datacard">Cartão de Crédito</Link></button>
                 <h2>Ou</h2>
                 <button style={{backgroundColor: 'var(--color-blue-bloq)'}}>Crédito Consignado</button>
                 <p>Em Breve</p>
@@ -58,5 +59,10 @@ const Container = styled.div`
         width: 380px;
         text-align: end;
         color: var(--color-font);
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--color-white);
     }
 `;

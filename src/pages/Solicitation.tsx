@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import Sidebar from "../components/Sidebar";
@@ -26,7 +27,7 @@ export default function Home() {
                 <h2>000.000.000-00</h2>
                 <h3>Lara Test</h3>
 
-                <button>Solicitar</button>
+                <button><Link to="/solicitation/card">Solicitar</Link></button>
             </Wrapp>
         </Container>
       </>
@@ -38,6 +39,11 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 55px;
+
+    a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
 `;
 const Busca = styled.div`
     display: flex;
